@@ -4,12 +4,14 @@ import keyboard
 import sys
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+import os
 
 def main():
     time_counter = 0
     neo = 0
     tags = 0
-    filename = 'neo_tracking.csv'
+    filename = 'neo_tracking'
+    csvname = f"{filename}.csv"
     space_pressed = False
     times, neos = [], []
 
@@ -29,7 +31,7 @@ def main():
     plt.draw()
 
     # Create and open the CSV file
-    with open(filename, 'w', newline='') as file:
+    with open(csvname, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['time', 'neo', 'tags'])  # Write header
 
@@ -76,6 +78,10 @@ def main():
             # Check for quit command
             if keyboard.is_pressed('q'):
                 print("\nQuitting...")
+                #Save graph in final state
+                plt.savefig(os.path.join(f"{filename}.png"))
+                plt.savefig(os.path.join(f"{filename}.pdf"))
+                plt.close()
                 break
 
             # Small sleep to reduce CPU usage
