@@ -14,7 +14,7 @@ def main():
     times, neos = [], []
 
     # Time acceleration factor (10x faster)
-    time_acceleration = 1
+    time_acceleration = 10
 
     # Set up the plot
     plt.ion()
