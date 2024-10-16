@@ -2,7 +2,7 @@
 Supplementary Material / Appendix for JH MScR Thesis
 
 
-The plasticity mechanism keyboard demonstration is located in the scripts folder. It has been tested on python version 3.6
+The plasticity mechanism keyboard demonstration is located in the scripts/plasticity_mechanism_keyboard folder. It has been tested on python version 3.6
 
 To try it out first install dependancies:
 * keyboard
@@ -12,7 +12,7 @@ You will have to run it with sudo to allow keyboard access. If you are using a M
 
 If you are in the root folder of this repository simply type the following into your terminal window:
 
-$ sudo python scripts/plastic_mech_keyboard.py
+$ sudo python scripts/plasticity_mechanism_keyboard/plastic_mech_keyboard.py
 
 A new window will pop up with a live animation graphing your current neophilic threshold.
 
@@ -25,3 +25,4 @@ By using this tool, you can imagine yourself as the robot exploring the environm
 This simple program will then adjust your temperament, for example a tendancy towards neophilia, based on your surroundings, and will keep a tally of the number of items you've seen. You can check the csv titled 'neo_tracking.csv' to reflect if you so desire. 
 
 The last states of the graphs are also saved as a pdf and png
+
